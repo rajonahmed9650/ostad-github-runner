@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: [self-hosted, ostad-runner]
+    runs-on: [self-hosted, osted-runner]
 
     steps:
       - name: Checkout repository
