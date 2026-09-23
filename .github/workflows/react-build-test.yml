@@ -8,22 +8,11 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: self-hosted
+    runs-on: [self-hosted, ostad-runner]
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Show Runner Information
-        shell: bash
-        run: |
-          echo "================================="
-          echo "GitHub Self-Hosted Runner"
-          echo "================================="
-          echo "Runner Name: $RUNNER_NAME"
-          echo "Runner OS: $RUNNER_OS"
-          echo "Runner Architecture: $RUNNER_ARCH"
-          echo "================================="
 
       - name: Install Dependencies
         run: npm install
